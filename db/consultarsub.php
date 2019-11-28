@@ -66,7 +66,7 @@ if($stmt->execute()) {
 
 
 $sql = "SELECT * FROM teste
-WHERE nome ='$pai'";
+WHERE nome ='$var'";
 
 $conexao = novaConexao();
 $resultado = $conexao->query($sql);
@@ -139,7 +139,7 @@ $conexao->close();
         <?php 
         
         $cont = (100/$numeroderegisto)* $concluida;?>
-        <h2>Progresso</h2>
+        <h2>Progresso da lista <?= $var ?></h2>
         <progress value="<?= $cont ?>" max="100">70 %</progress> 
     </tbody>
 </table>

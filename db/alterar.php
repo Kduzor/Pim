@@ -43,6 +43,20 @@ if(count($_POST) > 0) {
         
 
         $stmt = $conexao->prepare($sql);
+        
+    $sql = "UPDATE teste 
+    SET nome = '$nome'
+    WHERE nome = '$codigo'";
+    $fala = $conexao->prepare($sql);
+
+    if($fala) {
+        
+    } else {
+        echo "Erro: " . $conexao->error;
+    }
+    if($fala->execute()) {
+        unset($dados);
+    }
 
         if($stmt) {
             echo "Alterado :)";
@@ -54,6 +68,9 @@ if(count($_POST) > 0) {
         }
     }
 }
+
+    
+
 
 
 

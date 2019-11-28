@@ -26,7 +26,7 @@ if($_COOKIE['usuario']) {
         <span class="usuario">Usuário: <?= $_SESSION['usuario'] ?></span>
         <a href=<?= "/{$_GET['dir']}/{$_GET['file']}.php" ?> >
     
-        <a href="index.php">Voltar</a>
+        <a href="nav.php">Voltar</a>
         <a href="logout.php" class="vermelho">Sair</a>
     </nav>
     <main class="principal">
